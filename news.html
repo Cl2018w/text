@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function (){
+        var arr = ['驻汉堡总领事孙从彬会见汉堡市议长费特及议会访华团',
+                   '爱尔兰参议长祝贺十九大成功召开',
+                   '爱尔兰众、参议长做客中国大使官邸(组图)'];
+        var oUl = document.getElementById('news');
+        var oBtn = document.getElementById('btn1');
+        var oLi = document.getElementsByTagName('li');
+        var onOff = true;
+
+        oBtn.onclick = function(){
+            if(onOff){
+                for(var i = 0; i <arr.length; i++){
+                    oUl.innerHTML += '<li>'  + arr[i] +'</li>';
+                    oLi[i].style.listStyle = 'none';
+                    onOff = false;
+                };
+            };
+        };
+    };
+    </script>
+</head>
+<body>
+    <input  id="btn1" type="button" value="点开显示新闻：">
+    <ul id="news"></ul>
+
+</body>
+</html>
